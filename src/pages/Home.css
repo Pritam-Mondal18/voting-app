@@ -1,0 +1,167 @@
+/* Home.css - Modern Home Section */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background-color: #f4fef4;
+  color: #1a237e;
+  line-height: 1.6;
+}
+
+/* ---------- Header ---------- */
+.header {
+  background: linear-gradient(to right, #ff9933, #ffa64d);
+  padding: 24px 0;
+  text-align: center;
+  color: white;
+  font-size: 36px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* ---------- Navbar ---------- */
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  padding: 16px 0;
+  background-color: #fff;
+  border-bottom: 2px solid #ff9933;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #1a237e;
+  position: relative;
+}
+
+.navbar a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #138808;
+  transition: width 0.3s;
+}
+
+.navbar a:hover::after {
+  width: 100%;
+}
+
+/* ---------- Main Section ---------- */
+.home-section {
+  background: linear-gradient(to bottom right, #ffffff, #e6fff2);
+  padding: 100px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* .home-section {
+  background: linear-gradient(to bottom right, #ffffff, #e6fff2);
+  min-height: calc(
+    100vh - 160px
+  ); 
+  padding: 100px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+} */
+
+.home-section h1 {
+  font-size: 42px;
+  font-weight: 800;
+  color: #1a237e;
+  margin-bottom: 16px;
+}
+
+.home-section p {
+  font-size: 18px;
+  color: #4f4f4f;
+  max-width: 680px;
+  margin-bottom: 40px;
+}
+
+/* ---------- Buttons ---------- */
+.home-buttons {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.home-buttons a {
+  padding: 14px 32px;
+  border-radius: 12px;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 16px;
+  transition: transform 0.2s ease, background 0.3s ease;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+}
+
+.button-voter {
+  background-color: #ff9933;
+  color: white;
+}
+
+.button-voter:hover {
+  background-color: #e68600;
+  transform: translateY(-2px);
+}
+
+.button-admin {
+  background-color: #1a237e;
+  color: white;
+}
+
+.button-admin:hover {
+  background-color: #0f1b66;
+  transform: translateY(-2px);
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  background-color: #138808;
+  color: white;
+  padding: 18px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 500;
+  margin-top: auto;
+}
+
+/* ---------- Responsive ---------- */
+@media screen and (max-width: 600px) {
+  .home-section h1 {
+    font-size: 28px;
+  }
+
+  .home-section p {
+    font-size: 16px;
+    padding: 0 10px;
+  }
+
+  .home-buttons a {
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
