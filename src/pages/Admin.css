@@ -1,0 +1,71 @@
+.admin-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom right, #ffffff, #e6fff2);
+  padding: 20px;
+}
+
+.admin-box {
+  background-color: #ffffff;
+  padding: 40px 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+}
+
+.admin-box h2 {
+  font-size: 28px;
+  color: #1a237e;
+  margin-bottom: 24px;
+}
+
+.admin-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.action-btn {
+  padding: 14px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.start-election {
+  background-color: #ff9933;
+}
+
+.view-voters {
+  background-color: #1a237e;
+}
+
+.manage-results {
+  background-color: #138808;
+}
+
+.action-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.back-home {
+  display: inline-block;
+  margin-top: 10px;
+  color: #1a237e;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.back-home:hover {
+  text-decoration: underline;
+}

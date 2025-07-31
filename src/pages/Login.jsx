@@ -1,67 +1,32 @@
-// src/pages/Login.jsx
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import "./Login.css";
 
-const Login = () => {
-  const [mobile, setMobile] = useState("");
-  const [otp, setOtp] = useState("");
-  const [step, setStep] = useState(1);
-  const navigate = useNavigate();
-
-  const sendOtp = () => {
-    if (mobile.length === 10) {
-      alert("Mock OTP sent to " + mobile);
-      setStep(2);
-    }
-  };
-
-  const verifyOtp = () => {
-    if (otp === "123456") {
-      alert("Login successful!");
-      navigate("/vote");
-    } else {
-      alert("Invalid OTP");
-    }
-  };
-
+export default function Login() {
   return (
-    <div className="flex flex-col items-center mt-10 space-y-4">
-      <h2 className="text-2xl font-semibold">Login</h2>
-      {step === 1 ? (
-        <>
-          <input
-            type="text"
-            placeholder="Enter Mobile Number"
-            value={mobile}
-            onChange={(e) => setMobile(e.target.value)}
-            className="border p-2 rounded"
-          />
-          <button
-            onClick={sendOtp}
-            className="bg-blue-500 text-white px-4 py-2 rounded"
-          >
-            Send OTP
-          </button>
-        </>
-      ) : (
-        <>
-          <input
-            type="text"
-            placeholder="Enter OTP"
-            value={otp}
-            onChange={(e) => setOtp(e.target.value)}
-            className="border p-2 rounded"
-          />
-          <button
-            onClick={verifyOtp}
-            className="bg-green-500 text-white px-4 py-2 rounded"
-          >
-            Verify OTP
-          </button>
-        </>
-      )}
-    </div>
-  );
-};
+    <motion.div
+      className="login-container"
+      initial={{ opacity: 0, y: 40 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -40 }}
+      transition={{ duration: 0.6 }}
+    >
+      <div className="login-box">
+        <h2>Voter Login</h2>
+        <form>
+          <label htmlFor="voterId">Voter ID</label>
+          <input type="text" id="voterId" placeholder="Enter Voter ID" />
 
-export default Login;
+          <label htmlFor="password">Password</label>
+          <input type="password" id="password" placeholder="Enter Password" />
+
+          <button type="submit">Login</button>
+        </form>
+        <Link to="/" className="back-home">
+          ← Back to Home
+        </Link>
+      </div>
+    </motion.div>
+  );
+}
