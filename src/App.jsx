@@ -1,21 +1,18 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
 import Home from "./pages/Home";
-import Login from "./pages/Login";
-import Elections from "./pages/Elections";
-import Vote from "./pages/Vote";
-import Admin from "./pages/Admin";
 
 function App() {
+  const location = useLocation();
+
   return (
-    <BrowserRouter>
-      <Routes>
+    <AnimatePresence mode="wait">
+      <Routes location={location} key={location.pathname}>
         <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/elections" element={<Elections />} />
-        <Route path="/vote/:id" element={<Vote />} />
-        <Route path="/admin" element={<Admin />} />
+        <Route path="/login" element={<div>Login Page</div>} />
+        <Route path="/admin" element={<div>Admin Panel</div>} />
       </Routes>
-    </BrowserRouter>
+    </AnimatePresence>
   );
 }
 

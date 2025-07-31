@@ -6,6 +6,23 @@
 @tailwind utilities;
 
 /* Optional global styling */
-body {
+/* body {
   font-family: "Roboto", sans-serif;
+} */
+
+/* index.css or global.css */
+/* body {
+  background-color: var(--bg);
+  color: var(--text);
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  transition: all 0.3s ease;
+} */
+
+body {
+  background-color: #f4fef4;
+  color: #1a237e;
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  transition: all 0.3s ease;
 }
