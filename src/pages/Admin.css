@@ -1,28 +1,35 @@
+/* ---------- Admin Container ---------- */
 .admin-container {
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to bottom right, #ffffff, #e6fff2);
+  background: linear-gradient(to bottom right, #ffffff, #f0fff5);
   padding: 20px;
 }
 
+/* ---------- Admin Box ---------- */
 .admin-box {
   background-color: #ffffff;
   padding: 40px 30px;
   border-radius: 16px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
   width: 100%;
-  max-width: 500px;
+  max-width: 480px;
   text-align: center;
+  border-top: 5px solid #ff9933;
+  border-bottom: 5px solid #138808;
 }
 
+/* ---------- Heading ---------- */
 .admin-box h2 {
   font-size: 28px;
   color: #1a237e;
-  margin-bottom: 24px;
+  margin-bottom: 30px;
+  font-weight: 700;
 }
 
+/* ---------- Admin Action Buttons ---------- */
 .admin-actions {
   display: flex;
   flex-direction: column;
@@ -35,10 +42,10 @@
   font-size: 16px;
   font-weight: bold;
   border: none;
-  border-radius: 10px;
-  cursor: pointer;
+  border-radius: 12px;
   color: white;
-  transition: background 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .start-election {
@@ -55,12 +62,13 @@
 
 .action-btn:hover {
   transform: translateY(-2px);
-  opacity: 0.9;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
 }
 
+/* ---------- Back to Home ---------- */
 .back-home {
   display: inline-block;
-  margin-top: 10px;
+  margin-top: 14px;
   color: #1a237e;
   text-decoration: none;
   font-size: 14px;
@@ -68,4 +76,20 @@
 
 .back-home:hover {
   text-decoration: underline;
+}
+
+/* ---------- Mobile Responsive ---------- */
+@media screen and (max-width: 480px) {
+  .admin-box {
+    padding: 30px 20px;
+  }
+
+  .admin-box h2 {
+    font-size: 24px;
+  }
+
+  .action-btn {
+    font-size: 15px;
+    padding: 12px;
+  }
 }
