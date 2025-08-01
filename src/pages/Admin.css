@@ -15,7 +15,7 @@
   border-radius: 16px;
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
   width: 100%;
-  max-width: 480px;
+  max-width: 520px;
   text-align: center;
   border-top: 5px solid #ff9933;
   border-bottom: 5px solid #138808;
@@ -29,25 +29,41 @@
   font-weight: 700;
 }
 
-/* ---------- Admin Action Buttons ---------- */
+/* ---------- Admin Cards ---------- */
 .admin-actions {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 18px;
   margin-bottom: 24px;
 }
 
-.action-btn {
-  padding: 14px;
-  font-size: 16px;
-  font-weight: bold;
-  border: none;
-  border-radius: 12px;
+.admin-card {
+  padding: 18px 20px;
+  border-radius: 14px;
   color: white;
-  cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-decoration: none;
+  font-weight: 500;
+  text-align: left;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
+.admin-card h3 {
+  margin: 0 0 6px;
+  font-size: 18px;
+}
+
+.admin-card p {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.admin-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* ---------- Card Colors ---------- */
 .start-election {
   background-color: #ff9933;
 }
@@ -58,11 +74,6 @@
 
 .manage-results {
   background-color: #138808;
-}
-
-.action-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
 }
 
 /* ---------- Back to Home ---------- */
@@ -88,8 +99,11 @@
     font-size: 24px;
   }
 
-  .action-btn {
-    font-size: 15px;
-    padding: 12px;
+  .admin-card h3 {
+    font-size: 16px;
+  }
+
+  .admin-card p {
+    font-size: 13px;
   }
 }

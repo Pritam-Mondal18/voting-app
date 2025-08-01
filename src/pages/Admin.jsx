@@ -16,13 +16,20 @@ export default function Admin() {
         <h2>Welcome, Admin</h2>
 
         <div className="admin-actions">
-          <button className="action-btn start-election">
-            Start New Election
-          </button>
-          <button className="action-btn view-voters">
-            View Registered Voters
-          </button>
-          <button className="action-btn manage-results">Manage Results</button>
+          <Link to="/create-election" className="admin-card start-election">
+            <h3>🗳️ Start New Election</h3>
+            <p>Create and configure a new election process for voters.</p>
+          </Link>
+
+          <Link to="/voters" className="admin-card view-voters">
+            <h3>📋 View Registered Voters</h3>
+            <p>See the list of eligible voters registered in the system.</p>
+          </Link>
+
+          <Link to="/results" className="admin-card manage-results">
+            <h3>📊 Manage Results</h3>
+            <p>View or finalize the results of completed elections.</p>
+          </Link>
         </div>
 
         <Link to="/" className="back-home">
